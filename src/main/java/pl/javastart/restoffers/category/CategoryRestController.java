@@ -17,7 +17,7 @@ public class CategoryRestController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping
+    @GetMapping("")
     public List<Category> findAll() {
         return categoryService.findAll();
     }
@@ -27,7 +27,7 @@ public class CategoryRestController {
         return categoryService.findNames();
     }
 
-    @PostMapping
+    @PostMapping("")
     ResponseEntity<CategoryDto> saveCompany(@RequestBody CategoryDto categoryDto) {
         CategoryDto savedCategory = categoryService.saveCompany(categoryDto);
         URI savedCompanyUri = ServletUriComponentsBuilder.fromCurrentRequest()

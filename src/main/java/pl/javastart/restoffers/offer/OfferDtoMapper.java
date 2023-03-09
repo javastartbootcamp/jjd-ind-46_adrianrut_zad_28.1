@@ -15,10 +15,9 @@ public class OfferDtoMapper {
 
     public Offer map(OfferDto dto) {
         Offer offer = new Offer();
-        offer.setId(dto.getId());
         offer.setTitle(dto.getTitle());
         offer.setDescription(dto.getDescription());
-        Category category = categoryRepository.findById(dto.getCategoryId()).orElseThrow();
+        Category category = categoryRepository.findByName(dto.getCategory());
         offer.setCategory(category);
         offer.setImgUrl(dto.getImgUrl());
         offer.setPrice(dto.getPrice());
@@ -33,8 +32,7 @@ public class OfferDtoMapper {
         dto.setDescription(offer.getDescription());
         dto.setImgUrl(offer.getImgUrl());
         dto.setPrice(offer.getPrice());
-        dto.setCategoryId(offer.getCategory().getId());
-        dto.setCategoryName(offer.getCategory().getName());
+        dto.setCategory(offer.getCategory().getName());
         return dto;
     }
 }

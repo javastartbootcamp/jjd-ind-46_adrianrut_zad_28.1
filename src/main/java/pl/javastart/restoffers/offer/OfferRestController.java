@@ -17,7 +17,7 @@ public class OfferRestController {
         this.offerService = offerService;
     }
 
-    @GetMapping
+    @GetMapping("")
     public List<Offer> findAll(@RequestParam(required = false) String title) {
         if (title != null) {
             return offerService.findByTitle(title);
@@ -30,7 +30,7 @@ public class OfferRestController {
         return offerService.countOffers();
     }
 
-    @PostMapping
+    @PostMapping("")
     ResponseEntity<OfferDto> saveOffer(@RequestBody OfferDto offerDto) {
         OfferDto savedOffer = offerService.saveOffer(offerDto);
         URI savedOfferUri = ServletUriComponentsBuilder.fromCurrentRequest()
