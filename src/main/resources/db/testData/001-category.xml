@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="001-testdata-1" author="arutkowski">
+        <insert tableName="category">
+            <column name="name" value="Elektronika"/>
+            <column name="description" value="Bardzo fajne przedmioty"/>
+        </insert>
+        <insert tableName="category">
+            <column name="name" value="Moto"/>
+            <column name="description" value="Samochody, skutery i ciężarówki"/>
+        </insert>
+        <insert tableName="category">
+            <column name="name" value="Meble"/>
+            <column name="description" value="Świetne meble dla każdego"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
