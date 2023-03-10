@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+      https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="002-testdata-2" author="arutkowski">
+        <insert tableName="offer">
+            <column name="title" value="Telewizor"/>
+            <column name="description" value="Super telewizor o przekątnej 55 cali"/>
+            <column name="img_url" value="https://img.redro.pl/fototapety/stary-telewizor-z-halasem-na-bialym-tle-700-12370500.jpg"/>
+            <column name="price" value="1299"     />
+            <column name="category_id" value="1"    />
+        </insert>
+        <insert tableName="offer">
+            <column name="title" value="Kino domowe"/>
+            <column name="description" value="Wypasione kino domowe firmy Sony, gra tak, że można robić festyn"/>
+            <column name="img_url" value="https://image.ceneostatic.pl/data/products/28815117/i-lg-bh7440p.jpg"/>
+            <column name="price" value="699"     />
+            <column name="category_id" value="1"    />
+        </insert>
+        <insert tableName="offer">
+            <column name="title" value="Stół drewniany"/>
+            <column name="description" value="Idealny stół drewniany dla rodziny, 6 krzeseł gratis"/>
+            <column name="img_url" value="https://a.allegroimg.com/s1024/0c4856/e8ca8d4b4109b51b8043b48f85ca"/>
+            <column name="price" value="2699"     />
+            <column name="category_id" value="3"    />
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
